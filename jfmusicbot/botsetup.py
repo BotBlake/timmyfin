@@ -1,8 +1,6 @@
 import os
 import yaml
 
-from json import dumps
-
 # Path to YML-File
 yml_filename = "config.yml"
 
@@ -162,7 +160,8 @@ def build_config():
             )
             configuration[key] = answer
     print("Success!")
-    print(dumps(configuration, indent=4))
+    print()
+    print(yaml.dump(configuration, default_flow_style=False))
     return configuration
 
 
