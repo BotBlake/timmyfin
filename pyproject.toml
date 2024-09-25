@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "jfmusicbot"
+name = "timmyfin"
 version = "0.1.0"
-description = ""
+description = "Fork of jfmusicbot: A jellyfin music bot for discord "
 authors = ["felix920506 <felix920506@gmail.com>"]
 readme = "README.md"
 

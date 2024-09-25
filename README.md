@@ -1,6 +1,6 @@
-# jfmusicbot
+# timmyfin
 
-Jellyfin music bot for Discord.
+A fork of jfmusicbot: Jellyfin music bot for Discord.
 
 ## Requirements
 
@@ -41,37 +41,37 @@ It is normal to see these messages in the console. This is caused by a problem i
 
 ## Commands
 
-This list will assume the default prefix of `jfmusic`. This can be changed in the config.
+This list will assume the default prefix of `timmy`. This can be changed in the config.
 
-- `/jfmusic search <term> <type> <when>`
+- `/timmy search <term> <type> <when>`
   Search for a list of items using `<term>`. Options for `<when>` term: `now` stops current track and plays the specified track. `next` places the specified track next in the queue. `last` is the default behavior, places the specified track at the end of the playlist.
-- `/jfmusic play <term> <type> <when>`
+- `/timmy play <term> <type> <when>`
   Parameters work the same as the above command, except it directly uses the first result returned from the server, instead of asking the user to choose from a list of options
-- `/jfmusic skip`
+- `/timmy skip`
   Skips the current playing track
-- `/jfmusic nowplaying`
+- `/timmy nowplaying`
   Shows the current playing track
-- `/jfmusic queue`
+- `/timmy queue`
   Shows the current playlist
-- `/jfmusic start`
+- `/timmy start`
   Starts the player and plays the playlist
-- `/jfmusic pause`
+- `/timmy pause`
   Pauses playback
-- `/jfmusic resume`
+- `/timmy resume`
   Resumes playback
-- `/jfmusic stop`
+- `/timmy stop`
   Stops playback and clears the playlist
-- `/jfmusic shuffle`
+- `/timmy shuffle`
   Shuffles the playlist
-- `/jfmusic remove <index>`
+- `/timmy remove <index>`
   Removes the item at the specified index from the playlist. Index starts with 1.
-- `/jfmusic clear`
+- `/timmy clear`
   Clears the queue for the current Discord server.
-- `/jfmusic promote <index>`
+- `/timmy promote <index>`
   Promotes the item at the specified index from the playlist to the front. Index starts with 1.
-- `/jfmusic demote <index>`
+- `/timmy demote <index>`
   Demotes the item at the specified index from the playlist to the back. Index starts with 1.
-- `/jfmusic playnow <index>`
+- `/timmy playnow <index>`
   Skips the current playing track and play the specified index from the playlist. Index starts with 1. This does NOT discard tracks before the specified index. How this works is promote the specified index then skip the current track.
 
 ## Known limitations / issues / missing features
