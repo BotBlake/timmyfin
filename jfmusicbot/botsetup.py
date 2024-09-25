@@ -7,12 +7,12 @@ from json import dumps
 yml_filename = "config.yml"
 
 
-# Funktion zum Überprüfen und Einholen von Nutzereingaben
+# Check User Input before parsing through
 def get_user_input(prompt, default=None, validation_func=None):
     while True:
         user_input = input(f"{prompt} (Default: {default}): ") or default
         if validation_func and not validation_func(user_input):
-            print("Ungültige Eingabe, bitte erneut versuchen.")
+            print("Invalid Input. Please try again!")
         else:
             return user_input
 
@@ -38,8 +38,7 @@ def query_yes_no(question, default="yes"):
         raise ValueError("invalid default answer: '%s'" % default)
 
     while True:
-        print(question + prompt)
-        choice = input().lower()
+        choice = input(question + prompt).lower()
         if default is not None and choice == "":
             return valid[default]
         elif choice in valid:
@@ -48,7 +47,7 @@ def query_yes_no(question, default="yes"):
             print("Please respond with 'yes' or 'no' " "(or 'y' or 'n').\n")
 
 
-# Validierungsfunktionen
+# Validationfunctions
 class validate:
     def url(url):
         try:
@@ -164,6 +163,7 @@ def build_config():
             configuration[key] = answer
     print("Success!")
     print(dumps(configuration, indent=4))
+    return configuration
 
 
 # Funktion zum Erstellen der YML-Datei, wenn sie nicht existiert
